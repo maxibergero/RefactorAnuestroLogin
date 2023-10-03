@@ -1,0 +1,16 @@
+<h1>{{tittle}}</h1>
+<ul>
+    {{#each data}}
+    <li>
+        <h3>{{title}}</h3>
+        <p>Descripción: {{description}}</p>
+        <p>Código: {{code}}</p>
+        <p>ID: {{id}}</p>
+        <p>Precio: {{price}}</p>
+        <p>Estado: {{#if status}}Activo{{else}}Inactivo{{/if}}</p>
+        <p>Stock: {{stock}}</p>
+        <p>Categoría: {{category}}</p>
+        <p>Thumbnail: {{thumbnail}}</p>
+    </li>
+    {{/each}}
+</ul>

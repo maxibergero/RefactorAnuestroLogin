@@ -1,0 +1,19 @@
+<div class="bloque-de-producto">
+    <h1>{{title}}</h1>
+    
+            <h3 class="product-title">{{prod.title}}</h3>
+            <p class="product-description">Descripción: {{prod.description}}</p>
+            <p class="product-code">Código: {{prod.code}}</p>
+            <p class="product-id">ID: {{prod._id}}</p>
+            <p class="product-price">Precio: {{prod.price}}</p>
+            <p class="product-status">
+                Estado: {{#if status}}
+                    <span class="product-active">Activo</span>
+                {{else}}
+                    <span class="product-inactive">Inactivo</span>
+                {{/if}}
+            </p>
+            <p class="product-stock">Stock: {{prod.stock}}</p>
+            <p class="product-category">Categoría: {{prod.category}}</p>
+      
+</div>

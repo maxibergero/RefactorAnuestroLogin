@@ -1,0 +1,33 @@
+
+<div>
+    <div class="dropdown">
+  <button class="dropbtn">Opciones</button>
+  <div class="dropdown-content">
+    <a href="#">Perfil</a>
+    <a href="#">Configuración</a>
+    <a href="/api/sessions/logout">Cerrar Sesión</a> <!-- Esta línea redirige a la página de cierre de sesión -->
+  </div>
+</div>
+    <ul class="product-list">
+        {{#each productos}}
+        <li class="product-item">
+            <h3 class="product-title">{{this.title}}</h3>
+            <p class="product-description">Descripción: {{this.description}}</p>
+            <p class="product-code">Código: {{this.code}}</p>
+            <p class="product-id">ID: {{this._id}}</p>
+            <p class="product-price">Precio: {{this.price}}</p>
+            <p class="product-status">
+                Estado: {{#if this.status}}
+                    <span class="product-active">Activo</span>
+                {{else}}
+                    <span class="product-inactive">Inactivo</span>
+                {{/if}}
+            </p>
+            <p class="product-stock">Stock: {{this.stock}}</p>
+            <p class="product-category">Categoría: {{this.category}}</p>
+            <p class="product-thumbnail">Thumbnail: {{this.thumbnail}}</p>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+

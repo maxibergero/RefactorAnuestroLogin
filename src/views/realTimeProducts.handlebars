@@ -1,0 +1,79 @@
+<h1>{{title}}</h1>
+<!-- Agregar un formulario para agregar productos -->
+
+<form id="productForm">
+    <h2>Agregar Producto</h2>
+
+    <div class="form-group">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title">
+    </div>
+
+    <div class="form-group">
+        <label for="description">Descripción:</label>
+        <input type="text" id="description" name="description">
+    </div>
+
+    <div class="form-group">
+        <label for="code">Código:</label>
+        <input type="text" id="code" name="code">
+    </div>
+
+    <div class="form-group">
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price">
+    </div>
+
+    <div class="form-group">
+        <label for="status">Estado:</label>
+        <select id="status" name="status">
+            <option value="true">Activo</option>
+            <option value="false">Inactivo</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock">
+    </div>
+
+    <div class="form-group">
+        <label for="category">Categoría:</label>
+        <input type="text" id="category" name="category">
+    </div>
+
+    <div class="form-group">
+        <label for="thumbnail">Thumbnail:</label>
+        <input type="text" id="thumbnail" name="thumbnail">
+    </div>
+
+    <button id="btnAgregar" type="submit">Agregar Producto</button>
+     <button id="btnEliminar" type="submit">Eliminar Producto</button>
+     
+</form>
+
+<div>
+
+<ul class="product-list">
+    {{#each data}}
+    <li class="product-item">
+        <h3 class="product-title">{{title}}</h3>
+        <p class="product-description">Descripción: {{description}}</p>
+        <p class="product-code">Código: {{code}}</p>
+        <p class="product-id">ID: {{id}}</p>
+        <p class="product-price">Precio: {{price}}</p>
+        <p class="product-status">
+            Estado: {{#if status}}
+                <span class="product-active">Activo</span>
+            {{else}}
+                <span class="product-inactive">Inactivo</span>
+            {{/if}}
+        </p>
+        <p class="product-stock">Stock: {{stock}}</p>
+        <p class="product-category">Categoría: {{category}}</p>
+        <p class="product-thumbnail">Thumbnail: {{thumbnail}}</p>
+    </li>
+    {{/each}}
+</ul>
+</div>
+

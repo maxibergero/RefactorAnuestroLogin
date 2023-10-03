@@ -1,0 +1,29 @@
+.bloque-de-producto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 20px;
+    max-width: 400px; /* Ancho máximo del bloque */
+}
+
+.bloque-de-producto h1 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.bloque-de-producto p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.bloque-de-producto .product-active {
+    color: green;
+}
+
+.bloque-de-producto .product-inactive {
+    color: red;
+}
+
